@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Build'){
             steps{
+                sh 'git clone https://github.com/git/git'
                 sh 'go get -u github.com/jstemmer/go-junit-report'
                 sh 'go build .'
             }
